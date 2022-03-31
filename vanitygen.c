@@ -481,6 +481,7 @@ main(int argc, char **argv)
 					"DMD : Diamond : d\n"
 					"DOGED : Doge Dark Coin : D\n"
 					"DOGE : Dogecoin : D\n"
+					"tDOGE : Dogecoin Testnet: n\n"
 					"DOPE : Dopecoin : 4\n"
 					"DVC : Devcoin : 1\n"
 					"EFL : Electronic-Gulden-Foundation : L\n"
@@ -1368,6 +1369,14 @@ main(int argc, char **argv)
 					break;
 			}
 			else
+			if (strcmp(optarg, "tDOGE")== 0) {
+                fprintf(stderr,
+                    "Decrypting DOGE Testnet Address\n");
+                    addrtype = 113;
+                    privtype = 241;
+                    break;
+            }
+            else
 			if (strcmp(optarg, "LBRY")== 0) {
 				fprintf(stderr,
 					"Generating LBRY Address\n");
